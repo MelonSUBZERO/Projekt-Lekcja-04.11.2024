@@ -1,7 +1,14 @@
-.cont{
+.main{
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 50%;
+}
+.hist{
+    width: 25%;
+}
+.nav{
+    width: 25%;
 }
 body{
     background-color: grey;
