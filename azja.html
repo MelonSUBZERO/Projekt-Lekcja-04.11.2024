@@ -7,34 +7,37 @@
     <link rel="stylesheet" href="css.css">
 </head>
 <body onload="Azja()">
-    <div class="hist">
-        <h2>Historia gier:</h2>
-    </div>
     <div class="main">
-            <div class="rizz">
-            <div class="flaga">
-            </div>
+        <div class="rizz">
+            <div class="flaga"></div>
             <div class="check">
-            <input type="text" id="inp" placeholder="stolica"><br>
-            <button id="spr">SPRAWDŹ</button>
+                <input type="text" id="inp" placeholder="stolica"><br>
+                <button id="spr">SPRAWDŹ</button>
             </div>
             <div class="wynik">
                 <h2>Punktacja</h2>
                 <p class="pop"></p>
                 <p class="neg"></p>
-        </div>
+            </div>
         </div>
     </div>
-    <div class="nav">
-        <h2> Wybierz tryb:</h2>
-        <ul>
-            <li><a href="europa.html">Europa</a></li>
-            <li><a href="afryka.html">Afryka</a></li>
-            <li><a href="azja.html">Azja</a></li>
-            <li><a href="australia.html">Australia (Oceania)</a></li>
-            <li><a href="ameryki.html">Ameryka Północna i Południowa</a></li>
-            <li><a href="afryka.html">Tryb <b>EKSPERTA</b></a></li>
-        </ul>
+    <div class="container">
+        <div class="hist">
+            <h2>Historia gier:</h2>
+            <div id="history"></div> 
+        </div>
+        <div class="nav">
+            <h2> Wybierz tryb:</h2>
+            <ul>
+                <li><a href="europa.html">Europa</a></li>
+                <li><a href="afryka.html">Afryka</a></li>
+                <li><a href="azja.html">Azja</a></li>
+                <li><a href="australia.html">Australia (Oceania)</a></li>
+                <li><a href="nameryka.html">Ameryka Północna i Karaiby</a></li>
+                <li><a href="sameryka.html">Ameryka Południowa i Karaiby</a></li>
+                <li><a href="afryka.html">Tryb <b class="ex">EKSPERTA</b></a></li>
+            </ul>
+        </div>
     </div>
 
     <script src="js.js"></script>

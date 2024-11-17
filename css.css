@@ -1,39 +1,169 @@
-.main{
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #333; 
+    padding: 20px;
+}
+.container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    margin-top: 20px;
+}
+.hist, .nav {
+    width: 48%;
+    padding: 20px;
+    background-color: gray;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    height: 600px;
+}
+#history {
+    max-height: 450px;
+    overflow-y: auto;
+    padding-left: 0;
+    list-style-type: none;
+}
+
+#history div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+#history img {
+    width: 40px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.hist h2 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+}
+.main {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 50%;
-}
-.hist{
-    width: 25%;
-}
-.nav{
-    width: 25%;
-}
-body{
-    background-color: grey;
-}
-.rizz{
-    border: 2px solid wheat;
-    padding: 15px;
-}
-.nazwa{
-    text-align: center;
-    font-size: 25px;
-}
-.pop{
-    color: green;
-}
-.neg{
-    color: red;
-}
-.check{
-    text-align: center;
-}
-img{
+    flex-direction: column;
     width: 500px;
-    height: 250px;
+    height: 600px;
+    margin-top: 20px;
+    background-color: gray;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(5, 5, 5, 0.5);
 }
-.wynik{
+
+.rizz {
     text-align: center;
+    width: 100%;
+}
+
+.flaga img {
+    width: 250px;
+    height: 125px;
+    object-fit: contain;
+    margin-bottom: 20px;
+}
+
+.nazwa {
+    font-size: 24px;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #444;
+}
+
+.check {
+    margin-top: 20px;
+}
+
+.check input {
+    padding: 10px;
+    width: 80%;
+    margin-bottom: 10px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    text-align: center;
+}
+
+.check button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 80%;
+}
+
+.check button:hover {
+    background-color: #45a049;
+}
+
+.wynik {
+    margin-top: 20px;
+    font-size: 18px;
+    text-align: center;
+}
+
+.pop {
+    color: green;
+    font-weight: bold;
+}
+
+.neg {
+    color: red;
+    font-weight: bold;
+}
+.nav h2 {
+    font-size: 22px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.nav ul {
+    list-style: none;
+    padding-left: 0;
+    
+}
+
+.nav ul li {
+    margin-bottom: 10px;
+}
+
+.nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    display: block;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.nav ul li a:hover {
+    background-color: #ddd; 
+}
+
+.nav .ex {
+    font-weight: bold;
+    color: #ff6347; 
 }
