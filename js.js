@@ -15,6 +15,9 @@ let pop = 0;
 const images = document.querySelectorAll('img');
         const info = document.getElementById('info');
 let gameHistory = [];
+let nazwy = []
+let stolice = []
+let x = -1
 function Europa() {
     async function getData1() {
         const res = await fetch("https://restcountries.com/v3.1/region/europe");
@@ -28,6 +31,7 @@ function Europa() {
         img.setAttribute('src', kraj.flags.png);
         flaga.appendChild(img);
         nazwa.innerHTML = kraj.name.common;
+        nazwy.push(kraj.name.common)
         flaga.appendChild(nazwa);
         popP.innerHTML = `poprawne: <strong>${pop}</strong>`;
         negP.innerHTML = `niepoprawne: <strong>${neg}</strong>`;
@@ -87,7 +91,8 @@ function Europa() {
         } else {
             const odpUz = inp.value.trim().toLowerCase();
             const popStolica = kraj.capital ? kraj.capital[0].toLowerCase() : '';
-
+            stolice.push(popStolica)
+            x++
             if (odpUz === popStolica) {
                 pop++;
                 alert(`Podałeś poprawną stolicę ${kraj.name.common}`);
@@ -113,7 +118,7 @@ function Europa() {
             flagImg.alt = 'flaga';
             const czyZgadl = document.createElement('span');
             czyZgadl.style.fontSize = '20px';
-            czyZgadl.innerHTML = game.correct ? '✔️😏👍' : '❌👎😢';
+            czyZgadl.innerHTML = game.correct ? `To pańśtwo to ${nazwy[x]}, Poprawna odpowiedź to ${stolice[x]}, Odpowiedziałeś dobrze!✔️😁👍` : `To pańśtwo to ${nazwy[x]}, Poprawna odpowiedź to ${stolice[x]}, Odpowiedziałeś źle!❌👎😢`;
             flagImg.setAttribute('data-info', czyZgadl.innerHTML);
             gameElem.appendChild(flagImg);
             histDiv.appendChild(gameElem);
@@ -233,7 +238,7 @@ function Azja(){
                         flagImg.alt = 'flaga';
                         const czyZgadl = document.createElement('span');
                         czyZgadl.style.fontSize = '20px';
-                        czyZgadl.innerHTML = game.correct ? '✔️😏👍' : '❌👎😢';
+                        czyZgadl.innerHTML = game.correct ? `To pańśtwo to ${nazwy[x]}, Poprawna odpowiedź to ${stolice[x]}, Odpowiedziałeś dobrze!✔️😁👍` : `To pańśtwo to ${nazwy[x]}, Poprawna odpowiedź to ${stolice[x]}, Odpowiedziałeś źle!❌👎😢`;
                         flagImg.setAttribute('data-info', czyZgadl.innerHTML);
                         gameElem.appendChild(flagImg);
                         histDiv.appendChild(gameElem);
@@ -353,7 +358,7 @@ function Afryka(){
                         flagImg.alt = 'flaga';
                         const czyZgadl = document.createElement('span');
                         czyZgadl.style.fontSize = '20px';
-                        czyZgadl.innerHTML = game.correct ? '✔️😏👍' : '❌👎😢';
+                        czyZgadl.innerHTML = game.correct ? `To pańśtwo to ${nazwy[x]}, Poprawna odpowiedź to ${stolice[x]}, Odpowiedziałeś dobrze!✔️😁👍` : `To pańśtwo to ${nazwy[x]}, Poprawna odpowiedź to ${stolice[x]}, Odpowiedziałeś źle!❌👎😢`;
                         flagImg.setAttribute('data-info', czyZgadl.innerHTML);
                         gameElem.appendChild(flagImg);
                         histDiv.appendChild(gameElem);
@@ -473,7 +478,7 @@ function Australia(){
                                     flagImg.alt = 'flaga';
                                     const czyZgadl = document.createElement('span');
                                     czyZgadl.style.fontSize = '20px';
-                                    czyZgadl.innerHTML = game.correct ? '✔️😏👍' : '❌👎😢';
+                                    czyZgadl.innerHTML = game.correct ? `To pańśtwo to ${nazwy[x]}, Poprawna odpowiedź to ${stolice[x]}, Odpowiedziałeś dobrze!✔️😁👍` : `To pańśtwo to ${nazwy[x]}, Poprawna odpowiedź to ${stolice[x]}, Odpowiedziałeś źle!❌👎😢`;
                                     flagImg.setAttribute('data-info', czyZgadl.innerHTML);
                                     gameElem.appendChild(flagImg);
                                     histDiv.appendChild(gameElem);
@@ -593,7 +598,7 @@ function Ekspert(){
                                                 flagImg.alt = 'flaga';
                                                 const czyZgadl = document.createElement('span');
                                                 czyZgadl.style.fontSize = '20px';
-                                                czyZgadl.innerHTML = game.correct ? '✔️😏👍' : '❌👎😢';
+                                                czyZgadl.innerHTML = game.correct ? `To pańśtwo to ${nazwy[x]}, Poprawna odpowiedź to ${stolice[x]}, Odpowiedziałeś dobrze!✔️😁👍` : `To pańśtwo to ${nazwy[x]}, Poprawna odpowiedź to ${stolice[x]}, Odpowiedziałeś źle!❌👎😢`;
                                                 flagImg.setAttribute('data-info', czyZgadl.innerHTML);
                                                 gameElem.appendChild(flagImg);
                                                 histDiv.appendChild(gameElem);
@@ -718,7 +723,7 @@ function Nameryka(){
                         flagImg.alt = 'flaga';
                         const czyZgadl = document.createElement('span');
                         czyZgadl.style.fontSize = '20px';
-                        czyZgadl.innerHTML = game.correct ? '✔️😏👍' : '❌👎😢';
+                        czyZgadl.innerHTML = game.correct ? `To pańśtwo to ${nazwy[x]}, Poprawna odpowiedź to ${stolice[x]}, Odpowiedziałeś dobrze!✔️😁👍` : `To pańśtwo to ${nazwy[x]}, Poprawna odpowiedź to ${stolice[x]}, Odpowiedziałeś źle!❌👎😢`;
                         flagImg.setAttribute('data-info', czyZgadl.innerHTML);
                         gameElem.appendChild(flagImg);
                         histDiv.appendChild(gameElem);
@@ -843,7 +848,7 @@ function Sameryka(){
                                     flagImg.alt = 'flaga';
                                     const czyZgadl = document.createElement('span');
                                     czyZgadl.style.fontSize = '20px';
-                                    czyZgadl.innerHTML = game.correct ? '✔️😏👍' : '❌👎😢';
+                                    czyZgadl.innerHTML = game.correct ? `To pańśtwo to ${nazwy[x]}, Poprawna odpowiedź to ${stolice[x]}, Odpowiedziałeś dobrze!✔️😁👍` : `To pańśtwo to ${nazwy[x]}, Poprawna odpowiedź to ${stolice[x]}, Odpowiedziałeś źle!❌👎😢`;
                                     flagImg.setAttribute('data-info', czyZgadl.innerHTML);
                                     gameElem.appendChild(flagImg);
                                     histDiv.appendChild(gameElem);
