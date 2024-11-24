@@ -3,7 +3,16 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+.info {
+    display: none;
+    background-color: rgba(82, 78, 78, 0.816);
+    position: absolute;
+    color: white;
+    padding: 10px;
+    border-radius: 15px;
+    width: 450px;
+    text-align: center;
+}
 body {
     font-family: 'Arial', sans-serif;
     background-color: #f4f4f4; 
@@ -44,9 +53,11 @@ body {
 }
 
 #history img {
-    width: 40px;
-    height: 20px;
-    margin-right: 10px;
+    width: 450px;
+    height: 200px;
+margin: auto;
+    margin-bottom: 15px;
+    cursor: pointer;
 }
 
 .hist h2 {
